@@ -80,6 +80,57 @@ $d = "5";
 echo "<p>" . var_export($c == $d, true) . "</p>";
 echo "<p>" . var_export($c === $d, true) . "</p>";
 
+$x = "42";
+echo "<p>" . var_dump($x) . "</p>";
+echo "<p>" . var_export($x) . "</p>";
+
+$age = 18;
+
+if ($age >= 18) {
+    echo "<p>" . "You are an adult." . "</p>";
+}
+
+// echo "<br>";
+
+$time = 20; // 8PM
+
+if ($time < 18) {
+    echo "Good day!";
+} else {
+    echo "<p>" . "Good evening!" . "</p>";
+}
+
+// echo "<br>";
+
+$grade = 75;
+
+if ($grade >= 90) {
+    echo "A";
+} elseif ($grade >= 80) {
+    echo "B";
+} elseif ($grade >= 70) {
+    echo "<p>" . "C" . "</p>";
+} else {
+    echo "F";
+}
+
+// echo "<br>";
+
+$day = "Tuesday";
+
+switch ($day) {
+    case "Monday":
+        echo "Start of the week";
+        break;
+    case "Tuesday":
+        echo "Second day!";
+        break;
+    case "Friday":
+        echo "Weekend is near!";
+        break;
+    default:
+        echo "Just another day";
+}
 
 ?>
 
