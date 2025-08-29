@@ -132,6 +132,65 @@ switch ($day) {
         echo "Just another day";
 }
 
+// Write a program that checks the current hour (date("H")) and prints:
+// "Good morning" if before 12
+// "Good afternoon" if between 12–18
+// "Good evening" otherwise
+
+$time = date("H");
+if ($time <12){
+    echo "<p>" . "Good morning" . "</p>";
+} elseif ($time >=12 && $time <=18){
+    echo "<p>" . "Good afternoon" . "</p>";
+} else {
+    echo "Good evening";
+}
+
+// Create a variable $marks. If marks are:
+// 90+ → "Excellent"
+// 70–89 → "Good"
+// 50–69 → "Pass"
+// Below 50 → "Fail"
+
+$marks = 92;
+if ($marks >=90){
+    echo "<p>" . "Excellent" . "</p>";
+} elseif ($marks >=70 && $marks<=89){
+    echo "<p>" . "Good" . "</p>";
+} elseif ($marks >=50 && $marks<=69){
+    echo "<p>" . "Pass" . "</p>";
+} else {
+    echo "<p>" . "Fail" . "</p>";
+}
+
+// Use a switch to check the value of $color.
+// If "red" → "Stop"
+// If "yellow" → "Caution"
+// If "green" → "Go"
+// Otherwise → "Unknown color"
+
+$color = "Black";
+
+switch ($color) {
+    case "red":
+        echo "<p>" . "Stop" . "</p>";
+        break;
+    case "yellow":
+        echo "<p>" . "Caution" . "</p>";
+        break;
+    case "green":
+        echo "<p>" . "Go" . "</p>";
+        break;
+    default:
+        echo "<p>" . "Unknown Color" . "</p>";
+}
+
+// Use a ternary operator:
+// If $isLoggedIn = true → "Welcome back"
+// Otherwise → "Please log in"
+
+$isLoggedIn = true;
+echo ($isLoggedIn == true) ? "Welcome back" : "Please log in";
 ?>
 
 </body>
