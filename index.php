@@ -19,6 +19,24 @@ echo " <p>Today's date is " . date("Y/m/d") . "</p>";
 echo " <p> another format is " . date("d-m-Y") . "</p>";
 
 echo date("l, F j, Y");
+
+// day 2 session
+
+$name="Dennis Musyoka";
+$age=20;
+$height="5'6";
+$isStudent="YES";
+$favoriteColor="black";
+
+// <br>
+
+echo $name . $age . $height . $isStudent . $favoriteColor;
+
+$quote = "No man is free who is not a master of himself";
+echo strlen($quote);
+echo strtoupper($quote);
+
+
 ?>
 
 </body>
