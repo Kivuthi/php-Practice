@@ -191,6 +191,149 @@ switch ($color) {
 
 $isLoggedIn = true;
 echo ($isLoggedIn == true) ? "Welcome back" : "Please log in";
+
+$x = 1;
+
+while ($x <= 5) {
+    echo "<p>Number: $x</p>";
+    $x++; // increase $x by 1 each time
+}
+
+$y = 1;
+
+do {
+    echo "<p>Count: $y</p>";
+    $y++;
+} while ($y <= 3);
+
+for ($i = 1; $i <= 5; $i++) {
+    echo "<p>For loop: $i</p>";
+}
+
+
+$fruits = ["Apple", "Banana", "Mango"];
+
+foreach ($fruits as $fruit) {
+    echo "<p>I like $fruit</p>";
+}
+
+
+$person = ["name" => "Dennis", "age" => 20];
+
+foreach ($person as $key => $value) {
+    echo "<p>$key: $value</p>";
+}
+
+for ($i = 1; $i <= 5; $i++) {
+    if ($i == 3) continue; // skip 3
+    if ($i == 5) break;    // stop loop
+    echo "<p>$i</p>";
+}
+
+// Write a while loop that prints numbers from 1 to 10.
+$number = 1;
+
+while ($number <= 10) {
+    echo "<p> Number is: $number</p>";
+    $number++;
+}
+
+// Write a for loop that prints the multiplication table of 5 (from 5 × 1 up to 5 × 10).
+$a = 5;
+
+for ($b=1; $b<=10; $b++) {
+    echo "<p>" . "$a * $b = " . ($a * $b) . "</p>";
+}
+
+// Create an array of 5 favorite foods and print them using foreach.
+$favFoods = ["chapati", "samaki", "rice", "smokies", "pizza"];
+
+foreach ($favFoods as $favFood) {
+    echo "<p> Fovorite food is $favFood</p>";
+}
+
+// Use a loop with continue to skip number 7 while counting from 1 to 10.
+for ($x = 1; $x <= 10; $x++) {
+    if ($x == 7) continue;
+    echo "<p> number: $x</p>";
+}
+
+function greet() {
+    echo "<p>Hello, welcome to PHP!</p>";
+}
+
+greet(); // call it
+
+$name = "Dennis";
+
+function greetPerson($name) {
+    echo "<p>Hello, $name!</p>";
+}
+
+greetPerson($name);
+// greetPerson("Musyoka");
+
+
+function add($a, $b) {
+    return $a + $b;
+}
+
+$result = add(5, 3);
+echo "<p>Sum is: $result</p>";
+
+function greetTime($name = "Guest") {
+    echo "<p>Hello, $name!</p>";
+}
+
+greetTime();          // Hello, Guest!
+greetTime("Dennis");  // Hello, Dennis!
+
+
+$globalVar = "I am global";
+
+function testScope() {
+    $localVar = "I am local";
+    echo "<p>$localVar</p>";
+    // echo "<p>$globalVar</p>"; ❌ This won’t work inside unless we use 'global'
+}
+
+testScope();
+echo "<p>$globalVar</p>"; // works here
+
+
+// Write a function that takes a name as input and prints "Hello, [name]".
+function myName($name) {
+    echo "<p> Hello $name</p>";
+}
+myName("Dennis");
+
+// Write a function square($n) that returns the square of a number.
+function square($n) {
+    return $n * $n;
+}
+$square = square(3);
+echo "<p> The square is: $square</p>";
+
+// Write a function isEven($num) that returns true if a number is even, false otherwise.
+function isEven($num) {
+    return $num % 2 == 0;
+}
+$answer = isEven(3);
+if ($answer) {
+    echo "<p> true</p>";
+} else {
+    echo "<p> false</p>";
+}
+
+// Write a function multiply($a, $b = 2) that multiplies two numbers, but if the second one isn’t given, it multiplies by 2.
+function multiply($a, $b = 2) {
+    return $a * $b;
+}
+$result = multiply(3, 4);
+echo "<p> Answer is: $result</p>";
+
+$result2 = multiply(5);
+echo "<p> Answer is: $result2</p>";
 ?>
 
 </body>
