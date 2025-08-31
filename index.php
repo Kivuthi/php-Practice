@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php session</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>This is me trying php</h1>
@@ -335,6 +336,148 @@ echo "<p> Answer is: $result</p>";
 $result2 = multiply(5);
 echo "<p> Answer is: $result2</p>";
 ?>
+<?php
+$fruits = ["Apple", "Banana", "Orange"];
+
+echo $fruits[0]; // Apple
+echo $fruits[2]; // Orange
+
+// loop through array
+foreach ($fruits as $fruit) {
+    echo "<p>Fruit: $fruit</p>";
+}
+?>
+
+<?php
+$student = [
+    "name" => "Dennis",
+    "age" => 20,
+    "grade" => "A"
+];
+
+echo $student["name"]; // Dennis
+echo $student["grade"]; // A
+?>
+
+<?php
+$students = [
+    ["name" => "Dennis", "age" => 20],
+    ["name" => "Joy", "age" => 22],
+    ["name" => "Ali", "age" => 19]
+];
+
+// Loop through all
+foreach ($students as $s) {
+    echo "<p>" . $s["name"] . " is " . $s["age"] . " years old.</p>";
+}
+
+<?php
+$numbers = [4, 1, 9, 2];
+
+sort($numbers); // sorts ascending
+print_r($numbers);
+
+echo count($numbers); // number of elements
+?>
+
+
+// Q1
+
+$cars = ["toyota", "mitsubishi", "isuzu", "bmw", "benz"];
+array_push($cars, "porsche");
+array_shift($cars);
+
+print_r($cars);
+
+// Q2
+
+$countries = [
+    "Kenya" => "Nairobi",
+    "Tanzania" => "Arusha",
+    "Uganda" => "Kampala"
+];
+krsort($countries)
+foreach ($countries as $country => $capital) {
+    echo "<p>$country → $capital";
+}
+print_r($countries)
+
+// Q3
+$sentence = "I love learning PHP arrays";
+$words explode(" ", $sentence);
+echo $words
+
+$newSentence echo implode(", ", $sentence);
+echo $newSentence
+?>
+
+
+// Student Report Card Program:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Report Card</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking CSS -->
+</head>
+<body>
+
+<h1>Student Report Card</h1>
+
+<?php
+// Student details
+$name = "Dennis Musyoka";
+$age = 20;
+
+// Subjects and marks
+$subjects = [
+    "Math" => 85,
+    "English" => 78,
+    "Science" => 92,
+    "History" => 67,
+    "Computer" => 90
+];
+
+// Calculate total & average
+$total = array_sum($subjects);
+$average = $total / count($subjects);
+
+// Determine grade
+if ($average >= 90) {
+    $grade = "A";
+} elseif ($average >= 75) {
+    $grade = "B";
+} elseif ($average >= 50) {
+    $grade = "C";
+} else {
+    $grade = "F";
+}
+?>
+
+<!-- Display Student Info -->
+<p><strong>Name:</strong> <?php echo $name; ?></p>
+<p><strong>Age:</strong> <?php echo $age; ?></p>
+
+<!-- Display Marks Table -->
+<table border="1">
+    <tr>
+        <th>Subject</th>
+        <th>Marks</th>
+    </tr>
+    <?php foreach ($subjects as $subject => $marks): ?>
+        <tr>
+            <td><?php echo $subject; ?></td>
+            <td><?php echo $marks; ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
+<p><strong>Total Marks:</strong> <?php echo $total; ?></p>
+<p><strong>Average:</strong> <?php echo number_format($average, 2); ?></p>
+<p><strong>Grade:</strong> <?php echo $grade; ?></p>
+
+</body>
+</html>
 
 </body>
 </html>
